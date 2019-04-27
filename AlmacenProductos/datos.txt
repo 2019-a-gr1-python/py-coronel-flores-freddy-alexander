@@ -1,0 +1,3 @@
+5,Aceite,2.15,Proveedor 5,20
+10,Tallarin,1.25,proveedor 1,20
+18,Cepillo tipo 2,1.25,proveedor 5,125
