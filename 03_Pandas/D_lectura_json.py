@@ -48,17 +48,16 @@ def leer_json_en_carpertas(directorio,llaves):
                 )
             pieza_arte = leer_json(directorio_archivo,llaves)
             trabajos_arte.append(pieza_arte)
-            break
+            
     df = pd.DataFrame.from_records(
         trabajos_arte,
         columns = llaves,
         index = "id"
         
     )
-    print(df)
-    print(df.shape)
-leer_json_en_carpertas(path,llaves)
-
+    return df 
+df  = leer_json_en_carpertas(path,llaves)
+df.to_csv()
     
     
 
