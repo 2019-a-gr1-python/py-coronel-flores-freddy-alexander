@@ -1,4 +1,5 @@
 import scrapy 
+import pandas as pd
 
 class IntroSpider(scrapy.Spider):
     name = 'introduccion_spider'
@@ -21,3 +22,13 @@ class IntroSpider(scrapy.Spider):
         print(titulos)
         print(stocks)
         print(precios)
+
+      
+
+        with open('prueba.txt','+a') as file:
+            file.writelines(titulos)
+            file.writelines(stocks)
+            file.writelines(precios)
+
+
+
