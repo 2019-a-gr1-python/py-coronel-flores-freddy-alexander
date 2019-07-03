@@ -3,7 +3,7 @@ from scrapy.spiders import CSVFeedSpider
 
 class VinosSpider(CSVFeedSpider):
     name = "vinos"
-
+    
     start_urls = ['https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv']
     delimiter = ';'
     quotechar = '"'
