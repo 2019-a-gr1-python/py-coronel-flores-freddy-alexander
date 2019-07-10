@@ -23,6 +23,10 @@ class IntroSpider(scrapy.Spider):
         print(stocks)
         print(precios)
 
+        print(len(titulos))
+        print(len(stocks))
+        print(len(precios))
+
       
 
         with open('prueba.txt','+a') as file:

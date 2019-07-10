@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for scrapy_03 project
+# Scrapy settings for python_02 project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'scrapy_03'
+BOT_NAME = 'python_02'
 
-SPIDER_MODULES = ['scrapy_03.spiders']
-NEWSPIDER_MODULE = 'scrapy_03.spiders'
+SPIDER_MODULES = ['python_02.spiders']
+NEWSPIDER_MODULE = 'python_02.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'scrapy_03 (+http://www.yourdomain.com)'
+#USER_AGENT = 'python_02 (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'scrapy_03.middlewares.Scrapy03SpiderMiddleware': 543,
+#    'python_02.middlewares.Python02SpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'scrapy_03.middlewares.Scrapy03DownloaderMiddleware': 543,
+#    'python_02.middlewares.Python02DownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -64,21 +64,10 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
+#ITEM_PIPELINES = {
+#    'python_02.pipelines.Python02Pipeline': 300,
+#}
 
-# 10 -> mas importante (se va ejecutar primero)
-# 20 -> despues de 10
-# 30 -> despues de 30
-"""
-ITEM_PIPELINES = {
-    
-    'scrapy_03.pipelines.TransformarTituloMinusculas': 210 ,
-    'scrapy_03.pipelines.FiltrarSoloTabletas': 300,
-
-}
-
-FEED_FORMAT = 'json'
-FEED_URI = 'tmp/productos-fydeca.json'
-"""
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True

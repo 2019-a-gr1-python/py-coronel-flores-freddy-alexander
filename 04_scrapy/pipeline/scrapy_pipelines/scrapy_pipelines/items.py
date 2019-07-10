@@ -4,6 +4,7 @@
 #
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/items.html
+
 import scrapy
 from scrapy.loader.processors import MapCompose
 from scrapy.loader.processors import TakeFirst
@@ -21,3 +22,5 @@ class ProductoFybeca(scrapy.Item):
         output_processor = TakeFirst()
     )
     titulo = scrapy.Field()
+    precio = scrapy.Field() 
+    
