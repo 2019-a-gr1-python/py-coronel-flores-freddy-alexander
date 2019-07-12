@@ -9,15 +9,22 @@ from scrapy.loader.processors import TakeFirst
 # transfromar el precio a float
 # exportar a csv
 # anadir un pipeline para seleccionar los productos mayores al promedio
+def get_urls():
+    base_url = 'https://www.fybeca.com/FybecaWeb/pages/search-results.jsf?cat=238&s=changeThis&pp=25'
+    return [base_url.replace('changeThis',str(url)) for url in range(0,176,25) ]
+    #for page in range(0,176,25):
+        
+
 
 
 class AraniaProductosFybeca(scrapy.Spider):
     name = 'arania_fybeca'
 
     def start_requests(self):
-        urls = [
-        'https://www.fybeca.com/FybecaWeb/pages/search-results.jsf?cat=238&s=150&pp=25'
-        ]
+        #urls = [
+        #'https://www.fybeca.com/FybecaWeb/pages/search-results.jsf?cat=238&s=25&pp=25'
+        #]
+        urls = get_urls() 
 
         for url in urls:
             yield scrapy.Request(url=url)
@@ -45,6 +52,11 @@ class AraniaProductosFybeca(scrapy.Spider):
                 producto_loader.add_xpath(
                     'imagen',
                     'div[contains(@class,"detail")]/a[contains(@class,"image")]/img[contains(@id,"gImg")]/@src'
+                )
+
+                producto_loader.add_css(
+                    'precio',
+                    '.price::attr(data-bind)'
                 )
 
                 #producto_imprimir = producto_loader.load_item()
