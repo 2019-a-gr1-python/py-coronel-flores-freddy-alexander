@@ -1,6 +1,6 @@
 
 # %% 
-#tree -L 3
+!tree -L 3
 
 
 #%%
@@ -16,6 +16,7 @@ fybeca_df.precio.mean()
 fybeca_df.info()
 
 #%%
+ext install octref.veturfybeca_df.describe(include='all')
 
 
 #%%
